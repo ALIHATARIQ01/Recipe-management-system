@@ -19,6 +19,9 @@ The Recipe Management System is a comprehensive web application designed to faci
 ## Features
 
 ### User Interface
+- **Sign Up and Log In**: Gives access to users to view recipes of their own choices.
+- **Contact Us**: Gives privilege to users to ask their queries, give their suggestions and share 
+  their recipes with us.
 - **View Recipes**: Browse through a categorized list of recipes.
 - **Search Recipes**: Search for recipes using a substring in the search bar.
 - **Favorite Recipes**: Mark recipes as favorites by clicking the heart button.
