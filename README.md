@@ -71,7 +71,7 @@ The Recipe Management System is a web application that allows users to browse, s
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-username/recipe-management-system.git
+   git clone https://github.com/ALIHATARIQ01/recipe-management-system.git
    cd recipe-management-system
    ```
 
@@ -83,7 +83,7 @@ The Recipe Management System is a web application that allows users to browse, s
 3. **Create a `config.js` file:**
    ```javascript
    module.exports = {
-       mongoURI: 'your-mongodb-uri',
+       mongoURI: 'mongodb+srv://AlihaTariq:<passward>@alihatariq.iex4sks.mongodb.net/?retryWrites=true&w=majority&appName=AlihaTariq',
        dbName: 'recipe'
    };
    ```
