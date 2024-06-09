@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    /* background-image: url(home-bg\ .jpg); */
+    background-size: cover; /* or contain, etc. */
+    background-position: center center;
+    background-repeat: no-repeat;
+   background-color: #f05754;
+   /* background-image: linear-gradient(315deg, #55efc4 0%, #000000 74%); */
+}
+a {
+    color: rgb(255, 255, 255);
+    margin-right: 10px;
+}
+.header
+{
+    
+    height: 90px;
+    background-color: #000000;
+    color: #ffffff;
+    justify-content: flex-end;
+    display: flex;
+}
+.header .bar
+{
+    margin-top: 4%;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-align: end;
+    padding: 0;
+    color: #ffffff;
+}
+
+.bar li
+{
+    margin-right: 20px;
+}
+.dialogue-box
+{
+    display: flex;
+    justify-content: center;
+
+}
+.recipe-form-container {
+    margin-top: 2%;
+    background-color:rgb(0, 0, 0);
+    padding: 30px;
+    color: #fffefe;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+h2 {
+    text-align: center;
+    color: #fffefe;
+}
+
+.recipe-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f05754;;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(207, 207, 158);
+}
+
+/* Style for ingredient inputs */
+.ingredient-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ingredient-input input {
+    width: calc(70% - 10px); /* 70% width for ingredient input */
+    margin-right: 10px;
+}
+
+.ingredient-input select {
+    
+    width: 30%; /* 30% width for amount select */
+}

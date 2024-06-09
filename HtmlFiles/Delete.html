@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Recipe</title>
+    <link rel="stylesheet" href="Delete.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <ul class="bar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="turtorials.html">Tutorials</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="Contect.html">contact</a></li>
+                <li><a href="Edit.html">Add/Edit</a></li>
+                <li><a href="Delete.html">Delete</a>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Delete a Recipe</h1>
+        <form id="delete-recipe-form">
+            <div class="form-group" id="category_inputs">
+                <label for="Category">Category:</label>
+                <div class="Category">
+                    <select name="Category" required>
+                        <option value="Italian">Italian</option>
+                        <option value="Pakistani">Pakistani</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Mexican">Mexican</option>
+                        <option value="Thai">Thai</option>
+                    </select>
+                </div>
+            </div>
+
+            <label for="recipe-name">Recipe Name:</label>
+            <input type="text" id="recipe-name" name="recipe-name" required>
+
+            <button type="submit">Delete Recipe</button>
+        </form>
+        <div id="response"></div>
+    </div>
+
+    <script>
+        document.getElementById('delete-recipe-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const category = event.target.Category.value;
+            const recipeName = event.target['recipe-name'].value;
+
+            try {
+                const response = await fetch('http://localhost:3000/delete-recipe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ Category: category, recipeName: recipeName })
+                });
+
+                const responseData = await response.json();
+
+                const responseDiv = document.getElementById('response');
+                if (response.ok) {
+                    responseDiv.textContent = responseData.message;
+                } else {
+                    responseDiv.textContent = responseData.error;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('response').textContent = 'An error occurred';
+            }
+        });
+        
+    </script>
+</body>
+</html>

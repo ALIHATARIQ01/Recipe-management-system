@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f05754;
+}
+a 
+{
+    color: rgb(255, 255, 255);
+    margin-right: 10px;
+}
+.header
+{
+    height: 90px;
+    background-color: rgb(2, 2, 2);
+    color: #ffffff;
+    justify-content: flex-end;
+    display: flex;
+}
+.header .bar
+{
+    margin-top: 4%;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-align: end;
+    padding: 0;
+}
+.bar li
+{
+    margin-right: 20px;
+    color: #ffffff;
+}
+.heading
+{
+    text-align: center;
+    background-color: rgb(14, 13, 14);
+    font-size: 50px;
+    color: #ffffff;
+}

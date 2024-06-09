@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Edit Recipe - Food Recipe App</title>
+    <link rel="stylesheet" href="edit.css"> 
+</head>
+<body>
+    <header>
+        <div class="header">
+            <ul class="bar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="turtorials.html">Tutorials</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="Contect.html">contact</a></li>
+                <li><a href="Edit.html">Add/Edit</a></li>
+                <li><a href="Delete.html">Delete</a>
+            </ul>
+        </div>
+    </header>
+    <div class="dialogue-box">
+        <div class="recipe-form-container">
+            <h2>Add Recipe</h2>
+            <form action="http://localhost:3000/add-recipe" method="POST" class="recipe-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Recipe Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group" id="category_inputs">
+                    <label for="Category">Category:</label>
+                    <div class="Category">
+                        <select name="Category" required>
+                            <option value="Italian">Italian</option>
+                            <option value="Pakistani">Pakistani</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="Mexican">Mexican</option>
+                            <option value="Thai">Thai</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="Description">Description:</label>
+                    <textarea id="Description" name="Description" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="Serving">Serving:</label>
+                    <textarea id="Serving" name="Serving" rows="1" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="Cooking_Time">Cooking Time:</label>
+                    <textarea id="Cooking_Time" name="Cooking_Time" rows="1" required></textarea>
+                </div>
+                <div class="form-group" id="ingredient_inputs">
+                    <label for="ingredient">ingredient:</label>
+                    <div class="ingredient-input">
+                        <input type="text" name="ingredient[]" placeholder="ingredient" required>
+                    </div>
+                </div>
+                <button type="button" onclick="addIngredient()">Add Ingredient</button>
+                <div class="form-group">
+                    <label for="steps">steps:</label>
+                    <textarea id="steps" name="steps" rows="8" required></textarea>
+                </div>
+                <button type="submit">Save Recipe</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function addIngredient() {
+            const ingredientInputs = document.getElementById('ingredient_inputs');
+            const newIngredientInput = document.createElement('div');
+            newIngredientInput.classList.add('ingredient-input');
+            newIngredientInput.innerHTML = `
+                <input type="text" name="Ingredient[]" placeholder="Ingredient" required>
+            `;
+            ingredientInputs.appendChild(newIngredientInput);
+        }
+    </script>
+</body>
+</html>

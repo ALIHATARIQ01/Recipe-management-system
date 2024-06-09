@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Kablammo&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+25&family=Kablammo&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+25&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kablammo&family=Roboto:wght@100&display=swap');
+
+body 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f05754;
+   
+}
+a 
+{
+    color: rgb(255, 255, 255);
+    margin-right: 10px;
+}
+.header
+{
+    height: 90px;
+    background-color: rgb(0, 0, 0);
+    color: #000000;
+    justify-content: flex-end;
+    display: flex;
+}
+.header .bar
+{
+    margin-top: 4%;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-align: end;
+    padding: 0;
+}
+.bar li
+{
+    margin-right: 20px;
+}
+.heading
+{
+    text-align: center;
+    background-color: transparent;
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f05754;
+}
+.contact-info,.contact-form{
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    text-align: center;
+    color: #edffef;
+    font-size: 25px;
+}
+.contact-info h2, .contact-form h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #edffef;
+}
+.contact-form form{
+    text-align: center;
+}
+.contact-form label, 
+.contact-form input , 
+.contact-form textarea ,
+ .contact-form button {
+display: block;
+width: 100%;
+margin-bottom: 10px;
+}
+.contact-form button{
+    background-color: #0e0e0e;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: bold;
+    transform:.4s;
+    padding: 10px 0px;
+}
+.contact-form button:hover{
+    background-color: #f57878;
+    color: #eaf8fa;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.contact-form label{
+    text-align: left;
+    color: #edffef;
+}
+.contact-form input, .contact-form textarea{
+    padding: 8px;
+}
+.contact-info p{
+padding: 15px;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.social-icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 38px;
+}
+.social-icon:hover{
+    color: #746f6f;
+    cursor: pointer;
+}
+footer{
+    padding: 10px 0;
+    background: #000000;
+}
+footer h5{
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    color: #ffffff;
+}

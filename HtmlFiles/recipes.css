@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif; 
+    background-color: #f05754;
+}
+
+a {
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.header {
+    height: 90px;
+    background-color: #000000;
+    color: #ffffff;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.header .bar {
+    margin-top: 4%;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-align: end;
+    padding: 0;
+}
+
+.bar li {
+    margin-right: 20px;
+}
+
+.heading {
+    color: white;
+    text-align: center;
+    background-color: transparent;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: 'Josefin Sans', sans-serif; 
+}
+
+.container {
+    margin-top: 5%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+
+.container .cards {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 10%;
+    height: 280px;
+    width: 15%;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    cursor: pointer; 
+    transition: transform 0.3s ease; /* Add transition */
+}
+.cards img {
+    width: 90%;
+    height: 200px; 
+    object-fit: cover;
+}
+
+.container .cards:hover {
+    transform: translateY(-30px);
+}
+
+#recipes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.recipe-container {
+    background-color: #0c0b0b;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; 
+    padding: 20px;
+}
+
+.recipe-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f0ecec;
+}
+
+
+.recipe-container p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #efa9a9;
+}
+
+
+.recipe-container .details {
+    font-size: 16px;
+    color: #efa9a9;
+}
+
+
+.recipe-container h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #efa9a9;
+}
+
+
+.recipe-container ul,
+.recipe-container ol {
+    margin-left: 20px;
+}
+
+.recipe-container li {
+    margin-bottom: 5px;
+    color: #efa9a9;
+}
+
+.recipe-container .details p {
+    margin-bottom: 5px;
+}
+.heart-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: red;
+    margin-top: 10px;
+    transition: transform 0.2s;
+}
+
+.heart-button:hover {
+    color: darkred;
+    transform: scale(1.2);
+}
+
+.heart-button:focus {
+    outline: none;
+}
+
+.heart-button.active {
+    color: darkred;
+}

@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Kablammo&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+25&family=Kablammo&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+25&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kablammo&family=Roboto:wght@100&display=swap');
+
+body 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f05754;
+   
+}
+a 
+{
+    color: rgb(255, 255, 255);
+    margin-right: 10px;
+}
+.header
+{
+    height: 90px;
+    background-color: rgb(0, 0, 0);
+    color: #000000;
+    justify-content: flex-end;
+    display: flex;
+}
+.header .bar
+{
+    margin-top: 4%;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-align: end;
+    padding: 0;
+}
+.bar li
+{
+    margin-right: 20px;
+}
+.heading
+{
+    text-align: center;
+    background-color: transparent;
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #f05754;
+}
+.about img{
+    height: auto;
+    width: 430px;
+    border-radius: 20px 0 20px 0;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about h2{
+    color:#edffef;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.about-text p{
+    color: #fbfbfb;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+.about-text{
+    width: 500px;
+}
+/*Recipe Section CSS*/
+.recipe{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #213032;
+}
+.recipe h2{
+    color: #edffef;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.box .card img{
+    width: 100%;
+    height: 1005;
+    object-fit: cover;
+   
+}
+.box .card .content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: #edffef;
+    color: #fbfbfb;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.box .card:hover .content{
+    opacity: 1;
+}
+.card h3{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fbfbfb;
+}
+.box .card p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.box .card button{
+    position:relative;
+    background-color: #213032;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: bold;
+    transform:.4s;
+    padding: 13px 30px;
+ }
+ .box .card button:hover{
+    background-color: #97a2a3;
+    color: #213032;
+    border: 2px solid black;
+    cursor: pointer;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Kablammo&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+25&family=Kablammo&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+25&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kablammo&family=Roboto:wght@100&display=swap');
+
+body 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f05754;
+   
+}
+a 
+{
+    color: rgb(255, 255, 255);
+    margin-right: 10px;
+}
+.header
+{
+    height: 90px;
+    background-color: rgb(0, 0, 0);
+    color: #000000;
+    justify-content: flex-end;
+    display: flex;
+}
+.header .bar
+{
+    margin-top: 4%;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-align: end;
+    padding: 0;
+}
+.bar li
+{
+    margin-right: 20px;
+}
+.heading
+{
+    text-align: center;
+    background-color: transparent;
+    font-size: 50px;
+}
+.container 
+{
+    background-color: transparent;
+}
+h2
+{
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+p 
+{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+ul 
+{
+    color: #ffffff;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+li 
+{
+    font-size: 16px;
+    line-height: 1.6;
+}
+.container ul a 
+{
+    color: #55efc4;
+    text-decoration: none;
+}
+.container ul a:hover 
+{
+    text-decoration: underline;
+} */

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipes</title>
+    <link rel="stylesheet" type="text/css" href="recipes.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <ul class="bar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="turtorials.html">Tutorials</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="Contect.html">contact</a></li>
+                <li><a href="Edit.html">Add/Edit</a></li>
+                <li><a href="Delete.html">Delete</a>
+            </ul>
+        </div>
+    </header>
+    <div id="recipes_main">
+        <div class="heading">
+            <h1>Recipe</h1>
+        </div>
+        <div class="container">
+            <div class="cards" onclick="fetchRecipes('http:localhost:3000/api/Italian_recipes')">
+                <p>Italian recipes</p>
+                <img src="Italian_recipee.PNG" id="italian" alt="" height="200px">
+            </div>
+            <div class="cards"onclick="fetchRecipes('http:localhost:3000/api/Pakistani_recipes')">
+                <p>Pakistani recipes</p>
+                <img src="Pakistani_recipes.jpg" alt="" height="200px">
+            </div>
+            <div class="cards"onclick="fetchRecipes('http:localhost:3000/api/Japanese_recipes')">
+                <p>Japanese recipes</p>
+                <img src="Japanese_recipes.jpg" alt="" height="200px">
+            </div>
+            <div class="cards" onclick="fetchRecipes('http:localhost:3000/api/Mexican_recipes')">
+                <p>Mexican recipes</p>
+                <img src="Mexican_recipes.jpg" alt="" height="200px">
+            </div>
+            <div class="cards" onclick="fetchRecipes('http:localhost:3000/api/Thai_recipes')">
+                <p>Thai recipes</p>
+                <img src="Thai_recipes.jpg" alt="" height="150px">
+            </div>
+        </div>
+    </div>
+
+    <div id="recipes-container">
+        <!-- Italian recipes will be dynamically inserted here -->
+    </div>
+
+    <script>
+        async function fetchRecipes(url) {
+            try {
+                const response = await fetch(url);
+                const recipes = await response.json();
+                displayRecipes(recipes);
+            } catch (error) {
+                console.error('Error fetching recipes:', error);
+            }
+        }
+        
+        function displayRecipes(recipes) {
+            const recipesMain = document.getElementById('recipes_main');
+            recipesMain.style.display = "none";
+            const recipesContainer = document.getElementById('recipes-container');
+            recipesContainer.innerHTML = ''; // Clear previous content
+        
+            recipes.forEach(recipe => {
+                // Create recipe container
+                const recipeContainer = document.createElement('div');
+                recipeContainer.classList.add('recipe-container');
+                recipesContainer.appendChild(recipeContainer);
+        
+                // Create card
+                const card = document.createElement('div');
+                card.classList.add('card');
+                recipeContainer.appendChild(card);
+        
+                // Add title
+                const title = document.createElement('h2');
+                title.textContent = recipe.name;
+                card.appendChild(title);
+        
+                // Add description
+                const description = document.createElement('h3');
+                description.textContent = 'Description: ' + recipe.description;
+                card.appendChild(description);
+        
+                // Create details container
+                const details = document.createElement('div');
+                details.classList.add('details');
+                card.appendChild(details);
+        
+                // Add serving
+                const serving = document.createElement('p');
+                serving.textContent = 'Serving: ' + recipe.serving;
+                details.appendChild(serving);
+        
+                // Add origin
+                const origin = document.createElement('p');
+                origin.textContent = 'Origin: ' + recipe.origin;
+                details.appendChild(origin);
+        
+                // Add cooking time
+                const CookingTime = document.createElement('p');
+                CookingTime.textContent = 'Cooking Time: ' + recipe.CookingTime;
+                details.appendChild(CookingTime);
+        
+                // Add ingredients title
+                const ingredientsTitle = document.createElement('h3');
+                ingredientsTitle.textContent = 'Ingredients:';
+                details.appendChild(ingredientsTitle);
+        
+                // Add ingredients list
+                const ingredientsList = document.createElement('ul');
+                recipe.ingredients.forEach(ingredient => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = ingredient;
+                    ingredientsList.appendChild(listItem);
+                });
+                details.appendChild(ingredientsList);
+        
+                // Add steps title
+                const stepsTitle = document.createElement('h3');
+                stepsTitle.textContent = 'Steps:';
+                details.appendChild(stepsTitle);
+        
+                // Add steps list
+                const stepsList = document.createElement('ol');
+                recipe.steps.forEach(step => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = step;
+                    stepsList.appendChild(listItem);
+                });
+                details.appendChild(stepsList);
+        
+                // Add heart button
+                const heartButton = document.createElement('button');
+                heartButton.classList.add('heart-button');
+                heartButton.innerHTML = '❤';
+                heartButton.addEventListener('click', () => addToFavorites(recipe));
+                card.appendChild(heartButton);
+            });
+        }
+        
+        function addToFavorites(recipe) {
+            fetch('http://localhost:3000/api/favorites', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(recipe)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Recipe added to favorites:', data);
+            })
+            .catch(error => {
+                console.error('Failed to add recipe to favorites:', error);
+            });
+        }
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset</title>
+    <link rel="stylesheet" href="passreset.css">
+</head>
+<body>
+    
+    <div class="auth-container">
+        <div class="password-reset">
+            <h2>Password Reset</h2>
+    
+            <form action="password_reset.php" method="POST">
+                <input type="password" name="new_password" placeholder="New Password" required>
+                <input type="password" name="confirm_new_password" placeholder="Confirm New Password" required>
+                <button type="submit">Reset Password</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
