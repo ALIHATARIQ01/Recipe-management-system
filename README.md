@@ -48,6 +48,7 @@ The Recipe Management System is a comprehensive web application designed to faci
   - Body-parser
   - Cors
   - MongoDB Native Driver
+  - adobe photoshop
 
 ## Project Structure
 
